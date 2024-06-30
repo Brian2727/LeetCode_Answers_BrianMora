@@ -1,19 +1,24 @@
 from DataStructures.BinarySearchTree import BinarySearchTree
+from DataStructures.Graphs import Graph_UUU
 from Strings.reverse import reverse
 
 
-mytree = BinarySearchTree()
-mytree.insert(20)
-mytree.insert(7)
-mytree.insert(80)
-mytree.insert(7)
-mytree.insert(40)
-mytree.insert(20)
+my_graph = Graph_UUU()
 
-print(mytree.root)
-print(mytree.delete(80))
-print(mytree.root)
-print(mytree.delete(20))
-print(mytree.delete(20))
-print(mytree.delete(20))
-print(mytree.root)
+my_graph.addVertex(2)
+my_graph.addVertex(1)
+my_graph.addVertex(3)
+my_graph.addVertex(5)
+my_graph.addVertex(8)
+my_graph.addEdge(1,2)
+my_graph.addEdge(1,8)
+my_graph.addEdge(2,8)
+my_graph.addEdge(5,2)
+my_graph.addEdge(5,8)
+my_graph.addEdge(1,5)
+
+my_graph.makeConections()
+
+
+
+
