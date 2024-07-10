@@ -44,13 +44,13 @@ class linkedList:
             return 'No value Found'
 
     def getAll(self):
-        allNodes = ""
+        allNodes = []
         if self.head == None:
             return 0
         else:
             temp = self.head
             while temp.next:
-                allNodes = allNodes+" "+ str(temp.data)
+                allNodes.append(temp.data)
                 temp = temp.next
             return allNodes
 
@@ -61,8 +61,10 @@ class Graph_UUU():
     adjacentList = {}
 
     def addVertex(self, node):
-        self.adjacentList[node] = linkedList(node)
-        self.numNodes = self.numNodes + 1
+        if node in self.adjacentList:
+            self.adjacentList[node] = linkedList(node)
+        else:
+            self.numNodes = self.numNodes + 1
         return self.adjacentList[node]
 
     def addEdge(self,node1,node2):
