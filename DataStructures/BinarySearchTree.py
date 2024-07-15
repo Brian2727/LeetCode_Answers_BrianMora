@@ -138,3 +138,27 @@ class BinarySearchTree:
                     num_of_jumps = num_of_jumps + 1
                 except:
                     return f"Value Not Found Sorry"
+
+    def __str__(self):
+        queue = []
+        res = "    "
+        depth = 0
+        counterSeenNodes = 0
+        temp = self.root
+        queue.append(self.root)
+        nodesOnDepth = len(queue)
+        while len(queue) > 0:
+            if counterSeenNodes == nodesOnDepth:
+                counterSeenNodes = 0
+                nodesOnDepth = len(queue)
+                depth += 1
+                res += '\n'
+            temp = queue.pop(0)
+            res += "("+str(temp.value) + ')    '
+            counterSeenNodes += 1
+            if temp.left:
+                queue.append(temp.left)
+            if temp.right:
+                queue.append(temp.right)
+
+        return res
