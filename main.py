@@ -18,6 +18,7 @@ tree_initializer = [3,1,2,5,4,5,6,7]
 tree = BinarySearchTree()
 myGraph = Graph()
 
+<<<<<<< Updated upstream
 for x in tree_initializer:
     tree.insert(x)
 print(tree)
@@ -38,6 +39,8 @@ myGraph.add_vertex(4,1)
 #print(myGraph.bfs(1,4))
 s = "cdbcbbaaabab"
 print(maximumGain2(s,4,5))
+=======
+>>>>>>> Stashed changes
 
 
 
