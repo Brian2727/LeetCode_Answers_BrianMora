@@ -31,5 +31,4 @@ class RandomizedSet:
             return False
 
     def getRandom(self) -> int:
-
         return random.choice(self.randomArray)
